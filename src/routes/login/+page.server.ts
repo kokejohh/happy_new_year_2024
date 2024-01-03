@@ -97,7 +97,7 @@ export const actions: import('./$types').Actions = {
 
     nickname: async ({ cookies, request }) => {
         const data: FormData = await request.formData();
-        const nickname: FormDataEntryValue | null = data.get('nickname');
+        const nickname: string | undefined = data.get('nickname')?.toString().trim();
 
         const cookieValue: string = cookies.get('happy_new_year_2024') || '';
         const decodeCookie: string = decodeURIComponent(atob(cookieValue)) || '{}';
@@ -108,10 +108,11 @@ export const actions: import('./$types').Actions = {
             const userSnap = await getDoc(userRef);
 
             if (userSnap.exists()) {
+                const newNickname = nickname || user.nickname;
                 await updateDoc(userRef, {
-                    nickname: nickname,
+                    nickname: newNickname,
                 });
-                user.nickname = nickname?.toString() || '';
+                user.nickname = newNickname;
                 user.isNewUser = false;
                 console.log('update nickname successfully.');
             } else {
