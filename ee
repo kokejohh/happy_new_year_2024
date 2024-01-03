@@ -1,0 +1,6 @@
+VITE_FIRESTORE={"apiKey":"AIzaSyAA3k5ghWd-3x6NHhwGyYRhfAoAZ2jxbgM","authDomain":"happy-new-year-2024-29568.firebaseapp.com","projectId":"happy-new-year-2024-29568","storageBucket":"happy-new-year-2024-29568.appspot.com","messagingSenderId":"929942480714","appId":"1:929942480714:web:32280cf6ad4f8c956cc3b3","measurementId":"G-84518FFT48"}
+
+VITE_API_URL_TU=https://restapi.tu.ac.th/api/v1/auth/Ad/verify
+VITE_API_KEY_TU=TU2d5ed9888c9ad418189bd58c7b8eb12ab035f95f98ef2f5ed456514f57f4b487a5b0d8b6531c0c1badc3e65996977efd
+
+VITE_LOCATION=flag-2024-phatthalung

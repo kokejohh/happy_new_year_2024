@@ -24,6 +24,6 @@
     <input
         type="submit"
         value="ยืนยัน"
-        class="p-2 border-2 border-[var(--purple-dark)] bg-[var(--purple-dark)] hover:bg-white text-white hover:text-[var(--purple-dark)] text-sm font-semibold rounded-md"
+        class="btn-login"
     />
 </form>

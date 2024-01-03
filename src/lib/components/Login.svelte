@@ -36,6 +36,6 @@
         on:click={() => loading.fire()}
         type="submit"
         value="เข้าสู่ระบบ"
-        class="p-2 bg-[var(--purple-dark)] text-white text-sm font-semibold rounded-md"
+        class="btn-login"
     />
 </form>

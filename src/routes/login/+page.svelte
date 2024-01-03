@@ -10,9 +10,6 @@
     
 </script>
 
-<svelte:head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-</svelte:head>
 {#if !data.cookieValue.status && !data.cookieValue.isNewUser}
     <Login modal={form?.status === 401} username={form?.data.username || ''}/>
 {:else}

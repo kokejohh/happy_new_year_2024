@@ -17,4 +17,8 @@
     .input-text-login {
         @apply outline-none text-base text-[var(--purple-dark)] border-b-2 focus:border-[var(--purple-dark)] p-1 rounded-lg
     }
+
+    .btn-login {
+        @apply p-2 bg-[var(--purple-dark)] text-sm text-white font-semibold rounded-md hover:shadow-md hover:cursor-pointer
+    }
 }
