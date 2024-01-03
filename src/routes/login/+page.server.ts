@@ -15,7 +15,7 @@ interface User {
     status?: boolean;
     isNewUser?: boolean;
     location?: string;
-}
+};
 
 /** @type {import('./$types').PageServerLoad} */
 export const load: import('./$types').PageServerLoad = function ({ cookies }) {
