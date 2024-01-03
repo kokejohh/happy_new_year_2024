@@ -27,8 +27,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@dicebear/collection": "^5.3.5",
+		"@dicebear/core": "^5.3.5",
 		"axios": "^1.6.3",
 		"firebase": "^10.7.1",
+		"resvg": "^1.6.4",
 		"sweetalert2": "^11.10.2"
 	}
 }

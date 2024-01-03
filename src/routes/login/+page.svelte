@@ -7,11 +7,11 @@
 
     import Login from "$lib/components/Login.svelte";
     import LoginNickname from "$lib/components/LoginNickname.svelte";
-    
 </script>
 
+
+<LoginNickname nickname={data.cookieValue.nickname} />
 {#if !data.cookieValue.status && !data.cookieValue.isNewUser}
-    <Login modal={form?.status === 401} username={form?.data.username || ''}/>
+    <Login modal={form?.status === 401} username={form?.data.username || ""} />
 {:else}
-    <LoginNickname nickname={data.cookieValue.nickname} />
 {/if}
