@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 
 export const loading = Swal.mixin({
     background: "#00000000",
-    timerProgressBar: true,
+    timer: 20000,
     didOpen: () => {
         Swal.showLoading();
     },
