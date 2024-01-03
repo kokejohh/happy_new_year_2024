@@ -1,3 +1,20 @@
 @tailwind base;
-@tailwind comnponent;
+@tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --skin: #F5E8C7;
+    --purple-dark: #363062;
+    --purple-darkless: #435585;
+    --purple-darklest: #818FB4;
+    --nav: var(--purple-dark);
+    --background: var(--skin);
+    --background-2: var(--purple-darkless);
+}
+
+@layer components {
+    .input-text-login {
+        @apply outline-none text-base text-[var(--purple-dark)] border-b-2 focus:border-[var(--purple-dark)] p-1 rounded-lg
+    }
+}
