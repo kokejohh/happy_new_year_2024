@@ -97,7 +97,7 @@ export const actions: import('./$types').Actions = {
 
     nickname: async ({ cookies, request }) => {
         const data: FormData = await request.formData();
-        const nickname: string | undefined = data.get('nickname')?.toString().trim();
+        const nickname: string = (data.get('nickname')?.toString() || '').trim().substring(0, 30);
 
         const cookieValue: string = cookies.get('happy_new_year_2024') || '';
         const decodeCookie: string = decodeURIComponent(atob(cookieValue)) || '{}';
@@ -126,6 +126,8 @@ export const actions: import('./$types').Actions = {
         } catch (error: unknown) {
             console.log('change name error:', error);
         }
+        const changeNicknameFromProfile = data.get('changeNicknameFromProfile');
+        if (changeNicknameFromProfile) { throw redirect(302, '/about/me') }
         throw redirect(302, '/');
     },
 }
