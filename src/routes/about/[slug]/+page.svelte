@@ -5,6 +5,8 @@
     import { createAvatar } from "@dicebear/core";
     import { lorelei } from "@dicebear/collection";
 
+    import { loading } from "$lib/popup";
+
     let nickname: string = data.cookieValue.nickname || "";
     let tmpNickname: string = nickname;
     let avatar = createAvatar(lorelei, {
@@ -15,10 +17,6 @@
 
     function changeNickname() {
         pen = true;
-    }
-
-    function confirmChangeNickname() {
-        pen = false;
     }
 
     function cancelChangeNickname() {
@@ -92,6 +90,7 @@
                         type="submit"
                         name="changeNicknameFromProfile"
                         value="บันทึก"
+                        on:click={() => loading.fire()}
                         class="hover:cursor-pointer w-24 p-2 bg-[var(--purple-dark)] text-white text-sm font-semibold rounded-md"
                     />
                     <input
